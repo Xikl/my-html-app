@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/js/common/jquery.min.js"></script>
+    <script src="../static/js/jqueryTest.js"></script>
+
+</head>
+<body>
+    <!--<div id="test1"></div>-->
+    <!--<div id="imooc"></div>-->
+    <!--<div id="imooc2"></div>-->
+    <div id="a1">dd</div>
+    <div id="a" class="test">ddsss</div>
+    <div class="test"></div>
+    <p id="test2">点击测试：通过原生jQuery处理</p>
+</body>
+<script>
+    $('#test2').click(function () {
+        //通过包装成jQuery对象改变颜色
+        $(this).css('color', 'blue');
+    })
+</script>
+</html>
