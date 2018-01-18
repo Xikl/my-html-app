@@ -6,53 +6,6 @@
     <script src="../static/js/jquery.min.js"></script>
 </head>
 <body>
-<style type="text/css">
-    table.gridtable {
-        font-family: verdana,arial,sans-serif;
-        font-size: 11px;
-        color: #333333;
-        border: 1px #666666;
-        border-collapse: collapse;
-    }
 
-    table.gridtable th {
-        padding: 8px;
-        border: 1px solid #666666;
-        background-color: #dedede;
-    }
-
-    table.gridtable td {
-        padding: 8px;
-        border: 1px solid #666666;
-        background-color: #ffffff;
-    }
-</style>
-<script>
-    $(document).ready(function () {
-        var json = { 'columns': [{ 'FieldID': 'Column1', 'Title': 'Info Header 1' }, { 'FieldID': 'Column2', 'Title': 'Info Header2' }, { 'FieldID': 'Column3', 'Title': 'Info Header3' }], 'rows': [{ 'Column1': '1A', 'Column2': '1B', 'Column3': '1C' }, { 'Column1': '2A', 'Column2': '2B', 'Column3': '2C' }] };
-        var th;
-        $.each(json.columns, function (colIndex, col) {
-            th+="<th>" + col.Title + "</th>";
-        });
-        $("#myTb").append("<tr>" + th + "</tr>");
-
-        //行遍历
-        $.each(json.rows, function (rowIndex, row) {
-            var tr;
-            //列遍历
-            $.each(json.columns, function (colIndex, col) {
-                tr += '<td>' + row[col.FieldID] + '</td>'
-            });
-
-            $("#myTb").append('<tr>'+tr+'</tr>');
-        });
-
-    });
-</script>
-
-<!-- Table goes in the document BODY -->
-<table class="gridtable" id="myTb">
-
-</table>
 </body>
 </html>
